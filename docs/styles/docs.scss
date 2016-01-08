@@ -1,0 +1,10 @@
+@import './_variables';
+@import 'scss/stylific-lite';
+
+code, pre {
+  background-color: aliceblue;
+}
+
+pre {
+  padding: $sf-space / 2;
+}

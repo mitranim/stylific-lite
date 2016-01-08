@@ -1,0 +1,39 @@
+{
+  "name": "stylific-lite",
+  "version": "0.0.1",
+  "homepage": "http://mitranim.com/stylific-lite/",
+  "scripts": {
+    "start": "gulp",
+    "gulp": "gulp",
+    "prepublish": "gulp lib:build",
+    "push": "npm run prepublish && git push origin $(git symbolic-ref --short HEAD)",
+    "push-docs": "gulp build && (cd gh-pages && git add -A . && git commit -a -m autocommit && git push origin gh-pages)"
+  },
+  "author": "Mitranim <me@mitranim.com>",
+  "description": "Unfancy CSS",
+  "keywords": [
+    "styles",
+    "css",
+    "scss"
+  ],
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mitranim/stylific-lite.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "del": "^2.2.0",
+    "gulp": "git://github.com/gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-statil": "0.0.8",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "marked": "^0.3.5"
+  }
+}

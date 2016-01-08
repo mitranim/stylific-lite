@@ -1,0 +1,20 @@
+// Optional nonsense. Import separately.
+
+/**
+ * whitespace
+ */
+
+.pad {padding: $sf-space}
+.space-out > :not(:last-child) {margin-bottom: $sf-space}
+.space-out-h > :not(:last-child) {margin-right: $sf-space}
+
+/**
+ * typography
+ */
+
+.text-center  {text-align: center}
+.text-justify {text-align: justify}
+.text-left    {text-align: left}
+.text-right   {text-align: right}
+.text-smaller {font-size: $sf-font-size-smaller}
+.text-larger  {font-size: $sf-font-size-larger}

@@ -1,0 +1,23 @@
+$sf-breakpoint-sm: 600px !default;
+$sf-breakpoint-md: 960px !default;
+
+$sf-body-max-width: $sf-breakpoint-md !default;
+
+// Prefer default OS fonts.
+$sf-font-family-sans-serif: Helvetica Neue, Roboto, Segoe UI, Verdana, sans-serif !default;
+
+// OS X monospace > Windows monospace > fallback.
+$sf-font-family-monospace: Menlo, Consolas, monospace !default;
+
+$sf-font-weight: normal !default;
+
+$sf-line-height: 1.4 !default;
+
+$sf-font-size-smaller: 0.8em;
+$sf-font-size-larger: 1.25em;
+
+// Baseline rem: 12pt = 16px = 1em. Must be in absolute units (px or pt).
+$sf-rem: 12pt !default;
+
+// Common whitespace size.
+$sf-space: 1rem !default;

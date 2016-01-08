@@ -1,0 +1,230 @@
+/**
+ * Misc
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Common-sense cursor styles.
+a[href], button {
+  cursor: pointer;
+}
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+// IE 10 fix & higher specificity.
+[hidden]:not(:root) {display: none}
+
+// IE fix.
+template {display: none !important}
+
+/**
+ * Typography
+ */
+
+html {
+  font-family: $sf-font-family-sans-serif;
+  font-weight: $sf-font-weight;
+  font-size: $sf-rem;
+  line-height: $sf-line-height;
+  @media (max-width: $sf-breakpoint-md) {font-size: $sf-rem * 0.9}
+  @media (max-width: $sf-breakpoint-sm) {font-size: $sf-rem * 0.8}
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+ * :focus
+ */
+
+// Replace outline with box-shadow.
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px skyblue;
+}
+
+// FF
+::-moz-focus-inner {border: none}
+
+select:focus {
+  box-shadow: none;
+  outline: -webkit-focus-ring-color auto;
+}
+
+/**
+ * body
+ */
+
+body {
+  margin: 0 auto;
+  padding: $sf-space;
+  @if $sf-body-max-width != none {
+    max-width: $sf-body-max-width;
+  }
+}
+
+/**
+ * monospace
+ */
+
+pre {
+  white-space: pre-wrap;
+}
+
+code, pre {
+  font-family: $sf-font-family-monospace;
+  // Normalise monospace font size.
+  font-size: 14/16 * 1em;
+  // Prevent further reduction.
+  code, pre {
+    font-size: 1em;
+  }
+}
+
+/**
+ * lists
+ */
+
+ul, ol {
+  // Normalise default offset.
+  margin-left: $sf-space;
+  padding-left: 0;
+  // Normalise nested offset.
+  ul, ol {
+    margin-left: $sf-space;
+  }
+  // Normalise bullet position.
+  list-style-position: inside;
+}
+
+/**
+ * img
+ */
+
+// Limit image width.
+img {
+  max-width: 100%;
+}
+
+/**
+ * button
+ */
+
+button {
+  padding: $sf-space / 2;
+  font-size: inherit;
+
+  color: inherit;
+  background-color: inherit;
+
+  border: none;
+  box-shadow: 0 0 1px 0 lightgray;
+
+  &:focus {@extend :focus;}
+  &:active {@extend :focus;} // FF
+}
+
+/**
+ * inputs
+ */
+
+input, textarea {
+  padding: $sf-space / 2;
+  border: none;
+  box-shadow: 0 0 0 1px lightgray;
+  color: inherit;
+  background-color: inherit;
+  &::placeholder {color: gray}
+}
+
+// Don't let exceed container width.
+textarea {
+  resize: vertical;
+}
+
+form, input, textarea, button, select, option {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: inherit; // FF
+}
+
+/**
+ * hr
+ */
+
+hr {
+  margin: $sf-space 0;
+  border: none;
+  border-top: 1px solid lightgrey;
+}
+
+/**
+ * anchor
+ */
+
+a {
+  text-decoration: none;
+  color: royalblue;
+}
+
+a:active, a:visited {
+  color: midnightblue;
+}
+
+a:focus {
+  box-shadow: none;
+}
+
+// Link decorations in typographic tags.
+p a, ul a, ol a, dl a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, a.decorated {
+  border-bottom: 1px dotted;
+  &:hover, &:focus {
+    border-bottom: 1px solid;
+  }
+}
+
+/**
+ * headers
+ */
+
+// Normalise header font weight.
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+// Normalise h1 size in Webkit in <article> context.
+h1 {
+  font-size: 2em;
+}
+
+/**
+ * size tags
+ */
+
+sub, sup {
+  font-size: 0.5em;
+}
+
+small {
+  font-size: $sf-font-size-smaller;
+}
+
+big {
+  font-size: $sf-font-size-larger;
+}
+
+/**
+ * article
+ */
+
+article {
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    margin-top: $sf-space * 2;
+  }
+}

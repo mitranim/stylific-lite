@@ -6,14 +6,13 @@ makes them more palatable.
 Useful when you want a decent looking HTML document without any fancy-shmancy
 design.
 
-<a href="https://github.com/Mitranim/stylific-lite" target="_blank" class="fa fa-github">Source on GitHub →</a>
+<!-- src -->
 
 ## Usage
 
-Copy the prebuilt CSS from this documentation page and add overrides as you see
-fit.
+Copy the prebuilt CSS from this documentation and add overrides as you see fit.
 
-<a href="/stylific-lite/styles/docs.css" target="_blank">docs.css →</a>
+<a href="http://mitranim.com/stylific-lite/styles/docs.css" target="_blank">docs.css →</a>
 
 Or, if you're fancy, use the SCSS source.
 

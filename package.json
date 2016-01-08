@@ -6,8 +6,7 @@
     "start": "gulp",
     "gulp": "gulp",
     "prepublish": "gulp lib:build",
-    "push": "npm run prepublish && git push origin $(git symbolic-ref --short HEAD)",
-    "push-docs": "gulp build && (cd gh-pages && git add -A . && git commit -a -m autocommit && git push origin gh-pages)"
+    "deploy": "gulp build && (cd gh-pages && git add -A . && git commit -a -m autocommit && git push origin gh-pages)"
   },
   "author": "Mitranim <me@mitranim.com>",
   "description": "Unfancy CSS",

@@ -7,4 +7,16 @@
 <link rel="stylesheet" type="text/css" href="/stylific-lite/styles/docs.css">
 <link rel="icon" href="data:;base64,=">
 
-{{include('readme.md')}}
+<body></body>
+
+<article>
+  {{include('readme.md')
+    .replace(
+    '<!-- src -->',
+    '<p><a href="https://github.com/Mitranim/stylific-lite" target="_blank" class="fa fa-github">Source on GitHub →</a></p>'
+    )
+    .replace(
+      'http://mitranim.com/stylific-lite/styles/docs.css',
+      'styles/docs.css'
+    )}}
+</article>

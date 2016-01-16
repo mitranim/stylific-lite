@@ -1,10 +1,10 @@
 <!doctype html>
 
+<base href="/stylific-lite/">
 <meta charset="utf-8">
 <title>{{typeof title !== 'undefined' ? title + ' | stylific-lite' : 'stylific-lite'}}</title>
-<base href="/stylific-lite/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic&subset=latin" type="text/css">
-<link rel="stylesheet" type="text/css" href="/stylific-lite/styles/docs.css">
+<link rel="stylesheet" type="text/css" href="styles/docs.css">
 <link rel="icon" href="data:;base64,=">
 
 <body></body>
@@ -12,8 +12,8 @@
 <article>
   {{include('readme.md')
     .replace(
-    '<!-- src -->',
-    '<p><a href="https://github.com/Mitranim/stylific-lite" target="_blank" class="fa fa-github">Source on GitHub →</a></p>'
+      '<!-- src -->',
+      '<p><a href="https://github.com/Mitranim/stylific-lite" target="_blank" class="fa fa-github">Source on GitHub →</a></p>'
     )
     .replace(
       'http://mitranim.com/stylific-lite/styles/docs.css',

@@ -37,7 +37,7 @@ $sf-font-family-sans-serif: Open Sans, sans-serif;
 
 ## Misc
 
-This a lightweight companion to
+This is a lightweight companion to
 <a href="http://mitranim.com/stylific/" target="_blank">`stylific` →</a>
 
 License: <a href="http://www.wtfpl.net" target="_blank">Do What The Fuck You Want To →</a>
